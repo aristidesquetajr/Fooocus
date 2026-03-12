@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.4.1-base-ubuntu22.04
+FROM python:3.10-slim
 ENV DEBIAN_FRONTEND noninteractive
 ENV CMDARGS="--listen --port ${PORT:-7865}"
 
