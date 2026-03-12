@@ -1,6 +1,6 @@
 FROM nvidia/cuda:12.4.1-base-ubuntu22.04
 ENV DEBIAN_FRONTEND noninteractive
-ENV CMDARGS --listen
+ENV CMDARGS="--listen --port ${PORT:-7865}"
 
 RUN apt-get update -y && \
 	apt-get install -y curl libgl1 libglib2.0-0 python3-pip python-is-python3 git && \
